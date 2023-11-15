@@ -15,7 +15,7 @@ I'm in my final year of the M.Sc. in Computer Science at Hunan Normal University
 
 Previously, I focused on Mutual Adversarial Learning, Adversarial Machine Learning and GAN.
 
-U can find My [E-mail](wenjiBai024@gmail.com), [CV](../files/Wenji Bai CV.pdf).
+U can find My [CV](../files/Wenji Bai CV.pdf) here.
 
 
 
