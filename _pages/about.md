@@ -11,9 +11,9 @@ Hi there:)
 
 I'm Wenji. 
 
-I'm in my final year of the M.Sc. in Computer Science at Hunan Normal University, Changsha, China. I'm very fortunate to be working with [Prof. Lianming Zhang](https://www.scholat.com/zhanglianming.en). My current research interests are on Generative Machine Learning, Deep Learning, GNN.
+Starting this September, I will be pursuing a Ph.D. at Tampere University, Finland, and I am very fortunate to be working with [Prof. Juho Kanniainen]((https://sites.google.com/site/juhokanniainen/)). My co-supervisors are Prof. Konstantinos Stefanidis, with external supervision from Prof. Alexandros Iosifidis and Prof. Jukka Mähönen. My current research interests are in Generative Machine Learning and Adversarial Machine Learning.
 
-Previously, I focused on Mutual Adversarial Learning, Adversarial Machine Learning and GAN.
+Previously, I focused on Mutual Adversarial Learning, GNN, and GAN. I completed my M.Sc. in Computer Science at Hunan Normal University, Changsha, China, where I was fortunate to work with Prof. Lianming Zhang.
 
 U can find My [CV](../files/Wenji Bai CV.pdf) here.
 
