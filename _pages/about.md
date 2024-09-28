@@ -11,7 +11,7 @@ Hi there:)
 
 I'm Wenji. 
 
-Starting this September, I will be pursuing a Ph.D. at Tampere University, Finland, and I am very fortunate to be working with [Prof. Juho Kanniainen]((https://sites.google.com/site/juhokanniainen/)). My co-supervisors are [Prof. Konstantinos Stefanidis](https://homepages.tuni.fi/konstantinos.stefanidis/), with external supervision from [Prof. Alexandros Iosifidis](https://sites.google.com/view/iosifidis) and [Prof. Jukka Mähönen](https://researchportal.helsinki.fi/en/persons/jukka-tapio-m%C3%A4h%C3%B6nen). My current research interests are in Generative Machine Learning and Adversarial Machine Learning.
+I am a first-year Ph.D. student / Doctoral Researcher in Computer Science at Tampere University, Finland, and I am very fortunate to be working with [Prof. Juho Kanniainen]((https://sites.google.com/site/juhokanniainen/)). My co-supervisors are [Prof. Konstantinos Stefanidis](https://homepages.tuni.fi/konstantinos.stefanidis/), [Prof.Jaakko Peltonen](https://homepages.tuni.fi/jaakko.peltonen/), with external supervision from [Prof. Alexandros Iosifidis](https://sites.google.com/view/iosifidis) and [Prof. Jukka Mähönen](https://researchportal.helsinki.fi/en/persons/jukka-tapio-m%C3%A4h%C3%B6nen). My current research interests are in Generative AI, Adversarial Machine Learning and Financial Data.
 
 Previously, I focused on Mutual Adversarial Learning, GNN, and GAN. I completed my M.Sc. in Computer Science at Hunan Normal University, Changsha, China, where I was fortunate to work with Prof. Lianming Zhang.
 
