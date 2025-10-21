@@ -11,7 +11,7 @@ Hi there:)
 
 I'm Wenji. 
 
-I am a first-year Ph.D. student / Doctoral Researcher in Computer Science at Tampere University, Finland, and my current research interests are in Generative AI, Adversarial Machine Learning and Financial Data.
+I am a Doctoral Researcher in Computer Science at Tampere University, Finland, focusing on Generative AI and Multi-Agent LLMs.
 
 Previously, I focused on Mutual Adversarial Learning, GNN, and GAN. I completed my M.Sc. in Computer Science at Hunan Normal University, Changsha, China, where I was fortunate to work with Prof. Lianming Zhang.
 
