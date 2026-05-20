@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wenji Bai — Doctoral Researcher</title>
+<!--
+==================================================================
+  WENJI BAI · Personal Homepage (pixel-art, light theme)
+==================================================================
+  HOW TO CUSTOMIZE
+  1. Photo  : name your photo "profile.jpg" and place it in the same
+              folder as this file. A placeholder shows if it's missing.
+  2. Links  : search "REPLACE-LINK" to set Email / LinkedIn / GitHub /
+              Scholar / CV / songs URLs.  (GitHub & email already filled
+              from your CV — double-check them.)
+  3. News   : copy a whole .quest block to add an entry.
+  4. Pubs   : copy a whole .pub-row block to add a paper.
+  5. Deploy : drop into a GitHub Pages repo (username.github.io).
+==================================================================
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ---- light, easy-on-the-eyes palette ---- */
+  --bg:#fbf6ea;
+  --bg-2:#fffdf6;
+  --panel:#ffffff;
+  --ink:#3a3530;
+  --ink-dim:#8a8378;
+  --line:#e3d9c2;
+  --line-dark:#cbbf9f;
+  --mint:#5fc9a8;
+  --sky:#5aa9e6;
+  --coral:#f08c7a;
+  --apricot:#f4b860;
+  --lilac:#b69ad6;
+  --shadow:#dccba0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Pixelify Sans',sans-serif;
+  font-size:19px;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(rgba(203,191,159,.18) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(203,191,159,.18) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+::selection{background:var(--mint);color:#fff}
+a{color:var(--sky)}
+a:hover{color:var(--coral)}
+img{image-rendering:pixelated}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px;position:relative;z-index:2}
+
+.panel{
+  background:var(--panel);
+  border:3px solid var(--line-dark);
+  box-shadow:6px 6px 0 var(--shadow);
+}
+
+/* ---- topbar ---- */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:15px 0;border-bottom:3px solid var(--line-dark);
+}
+.logo{font-family:'Press Start 2P',monospace;font-size:12px;color:var(--mint);letter-spacing:1px}
+.logo .blink{animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.coins{font-family:'Press Start 2P',monospace;font-size:9px;color:var(--apricot);display:flex;gap:14px}
+.coins span{display:flex;align-items:center;gap:5px}
+
+/* ============================================================
+   HERO — left photo / right intro, all above the fold
+   ============================================================ */
+.hero{
+  display:grid;grid-template-columns:330px 1fr;gap:46px;
+  align-items:start;padding:40px 0 26px;
+}
+/* big photo card on the LEFT */
+.char-card{
+  background:var(--bg-2);border:3px solid var(--mint);
+  box-shadow:8px 8px 0 var(--shadow);padding:13px;
+  position:sticky;top:26px;
+}
+.char-card .portrait{
+  width:100%;aspect-ratio:1;object-fit:cover;display:block;
+  border:3px solid var(--line-dark);background:#f0ead9;
+}
+.char-card .nameplate{
+  font-family:'Press Start 2P',monospace;font-size:11px;color:#fff;
+  background:var(--mint);text-align:center;padding:10px 4px;margin-top:11px;
+}
+.char-card .subplate{
+  font-family:'Silkscreen',monospace;font-size:11px;color:var(--ink-dim);
+  text-align:center;padding:8px 4px 2px;line-height:1.5;
+}
+
+/* RIGHT column */
+.hero-info .tag{
+  font-family:'Press Start 2P',monospace;font-size:9px;color:var(--coral);
+  margin-bottom:14px;line-height:1.7;
+}
+.hero-info h1{
+  font-family:'Press Start 2P',monospace;font-size:clamp(22px,4.4vw,33px);
+  line-height:1.45;color:var(--ink);margin-bottom:18px;
+  text-shadow:3px 3px 0 var(--shadow);
+}
+.hero-info h1 .grn{color:var(--mint)}
+.hero-info .blurb{font-size:18px;color:var(--ink-dim);margin-bottom:20px}
+.hero-info .blurb b{color:var(--ink)}
+
+/* contact slots */
+.slots{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}
+.slot{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:'Silkscreen',monospace;font-size:11px;
+  background:var(--bg-2);border:3px solid var(--line-dark);
+  color:var(--ink);padding:8px 12px;cursor:pointer;
+  box-shadow:3px 3px 0 var(--shadow);
+  transition:transform .08s,box-shadow .08s,border-color .08s,color .08s;
+}
+.slot:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--shadow);border-color:var(--sky);color:var(--sky)}
+.slot:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--shadow)}
+.slot svg{width:14px;height:14px}
+
+/* About + Quick facts sit in the SAME right column, below intro */
+.hero-blocks{display:grid;grid-template-columns:1fr;gap:18px}
+.mini-head{
+  display:flex;align-items:center;gap:10px;margin-bottom:13px;
+}
+.mini-head .ic{
+  font-family:'Press Start 2P',monospace;font-size:10px;
+  background:var(--apricot);color:#fff;padding:7px 9px;
+  box-shadow:3px 3px 0 var(--shadow);
+}
+.mini-head h2{font-family:'Press Start 2P',monospace;font-size:12px;color:var(--ink)}
+.mini-head .rule{flex:1;height:3px;background-image:repeating-linear-gradient(90deg,var(--line-dark) 0 7px,transparent 7px 12px)}
+
+.about-box{padding:22px 24px}
+.about-box p{font-size:16.5px;margin-bottom:12px}
+.about-box p:last-child{margin-bottom:0}
+
+.facts-box{padding:18px 22px;background:var(--bg-2)}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 22px}
+.fact{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:2px dashed var(--line);font-size:15px}
+.fact .fi{font-size:18px}
+
+/* ============================================================
+   FULL-WIDTH SECTIONS below the fold
+   ============================================================ */
+section{margin:38px 0}
+.sec-bar{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sec-bar .ic{
+  font-family:'Press Start 2P',monospace;font-size:13px;
+  background:var(--apricot);color:#fff;padding:9px 11px;
+  box-shadow:4px 4px 0 var(--shadow);
+}
+.sec-bar h2{font-family:'Press Start 2P',monospace;font-size:15px;color:var(--ink)}
+.sec-bar .rule{flex:1;height:3px;background-image:repeating-linear-gradient(90deg,var(--line-dark) 0 8px,transparent 8px 14px)}
+
+/* NEWS = quest log */
+.questlog{padding:8px}
+.quest{
+  display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;
+  padding:15px 12px;border-bottom:3px dashed var(--line);
+}
+.quest:last-child{border-bottom:none}
+.quest .qmark{font-family:'Press Start 2P',monospace;font-size:13px;color:var(--apricot);animation:bob 1.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-3px)}}
+.quest .qbody{font-size:17px}
+.quest .qdate{font-family:'Silkscreen',monospace;font-size:11px;color:var(--sky);display:block;margin-bottom:2px}
+.quest .qtype{font-family:'Press Start 2P',monospace;font-size:8px;padding:5px 8px;color:#fff;white-space:nowrap}
+.qt-talk{background:var(--coral)}
+.qt-paper{background:var(--sky)}
+.qt-mile{background:var(--apricot)}
+.qt-award{background:var(--lilac)}
+
+/* PUBLICATIONS */
+.pubs{padding:6px}
+.pub-row{
+  display:grid;grid-template-columns:56px 1fr;gap:16px;
+  padding:18px 12px;border-bottom:3px dashed var(--line);align-items:start;
+}
+.pub-row:last-child{border-bottom:none}
+.pub-badge{
+  width:56px;height:56px;display:flex;align-items:center;justify-content:center;
+  font-family:'Press Start 2P',monospace;font-size:10px;color:#fff;
+  background:var(--lilac);box-shadow:3px 3px 0 var(--shadow);
+}
+.pub-title{font-family:'Pixelify Sans',sans-serif;font-weight:700;font-size:19.5px;color:var(--ink);margin-bottom:3px;line-height:1.32}
+.pub-auth{font-size:15px;color:var(--ink-dim)}
+.pub-auth b{color:var(--mint)}
+.pub-venue{font-family:'Silkscreen',monospace;font-size:11px;color:var(--sky);margin-top:3px}
+.pub-links{margin-top:8px;display:flex;gap:7px;flex-wrap:wrap}
+.pub-links a{font-family:'Silkscreen',monospace;font-size:10px;color:var(--ink);border:2px solid var(--line-dark);padding:3px 9px;background:var(--bg-2)}
+.pub-links a:hover{background:var(--sky);color:#fff;border-color:var(--sky)}
+
+/* SIDE QUEST */
+.cartridge{
+  background:var(--bg-2);border:3px solid var(--line-dark);
+  box-shadow:6px 6px 0 var(--shadow);padding:26px 24px;
+  transition:transform .12s,box-shadow .12s,border-color .12s;
+}
+.cartridge:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--shadow);border-color:var(--coral)}
+.cart-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:12px}
+.cart-top h3{font-family:'Press Start 2P',monospace;font-size:13px;line-height:1.5;color:var(--coral)}
+.cart-stage{font-family:'Silkscreen',monospace;font-size:9px;color:#fff;background:var(--apricot);padding:5px 8px;white-space:nowrap}
+.cartridge p{font-size:16.5px;color:var(--ink-dim);line-height:1.6}
+.cart-tags{margin-top:13px;display:flex;gap:6px;flex-wrap:wrap}
+.cart-tags span{font-family:'Silkscreen',monospace;font-size:9px;color:var(--ink-dim);border:2px solid var(--line-dark);padding:2px 7px}
+
+/* footer */
+footer{margin:38px 0 60px;padding-top:24px;border-top:3px solid var(--line-dark);text-align:center}
+footer .gameover{font-family:'Press Start 2P',monospace;font-size:11px;color:var(--coral);margin-bottom:8px}
+footer .credit{font-family:'Silkscreen',monospace;font-size:11px;color:var(--ink-dim)}
+footer .heart{color:var(--coral)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .5s steps(6),transform .5s steps(6)}
+.rv.in{opacity:1;transform:none}
+
+/* responsive */
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr;gap:28px}
+  .char-card{position:static;max-width:330px;margin:0 auto}
+  .fact-grid{grid-template-columns:1fr}
+  .quest{grid-template-columns:auto 1fr;gap:10px}
+  .quest .qtype{grid-column:2;justify-self:start}
+  .coins{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ===== TOPBAR ===== -->
+  <div class="topbar">
+    <div class="logo">WENJI.EXE<span class="blink">_</span></div>
+    <div class="coins">
+      <span> PLAYER Wenji 2.0</span>
+      <span> TAMPERE</span>
+    </div>
+  </div>
+
+  <!-- ===== HERO : photo (left) + intro & about (right) ===== -->
+  <header class="hero">
+
+    <!-- LEFT : big photo card -->
+    <div class="char-card rv">
+      <!-- REPLACE : profile.jpg in same folder. A bright, friendly square photo works best. -->
+      <img class="portrait" src="wenjibai.jpg" alt="Wenji Bai"
+           onerror="this.src='data:image/svg+xml;utf8,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22&gt;&lt;rect width=%22300%22 height=%22300%22 fill=%22%23f0ead9%22/&gt;&lt;text x=%2250%25%22 y=%2246%25%22 font-size=%2260%22 text-anchor=%22middle%22&gt;%F0%9F%91%BE&lt;/text&gt;&lt;text x=%2250%25%22 y=%2268%25%22 font-size=%2213%22 fill=%22%238a8378%22 text-anchor=%22middle%22 font-family=%22monospace%22&gt;profile.jpg&lt;/text&gt;&lt;/svg&gt;'">
+      <div class="nameplate">WENJI BAI (柏文姬)</div>
+      <div class="subplate">DOCTORAL RESEARCHER<br>TAMPERE UNIVERSITY</div>
+    </div>
+
+    <!-- RIGHT : intro + contacts + about + quick facts -->
+    <div class="hero-info">
+      <div class="tag rv">▶ GPT-LAB · FCAI · AI-DOC PROGRAMME · Tampere University</div>
+      <h1 class="rv">HI THERE :)<br>I'M <span class="grn">WENJI</span> BAI</h1>
+      <p class="blurb rv">
+        I'm a Doctoral Researcher in Computer Science at <b>GPT-Lab, Tampere University</b>,
+        and a member of the <b>AI-DOC programme</b> under the Finnish Center for Artificial
+        Intelligence (<b>FCAI</b>). My work centres on <b>Generative AI</b>, <b>Agentic AI</b>,
+        and <b>AI reliability &amp; trustworthiness</b>.
+      </p>
+
+      <div class="slots rv">
+        <!-- REPLACE-LINK : email (from CV) -->
+        <a class="slot" href="mailto:wenjiBai024@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16"/><path d="m2 7 10 6 10-6"/></svg>EMAIL</a>
+        <!-- REPLACE-LINK : LinkedIn -->
+        <a class="slot" href="https://linkedin.com/in/wenjibai" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14M8.34 17V9.93H6V17h2.34M7.17 8.9a1.36 1.36 0 1 0 0-2.71 1.36 1.36 0 0 0 0 2.71M18 17v-3.88c0-2.02-1.08-2.96-2.52-2.96-1.16 0-1.68.64-1.97 1.09v-.93h-2.34V17h2.34v-3.95c0-.21.02-.42.08-.57.17-.42.55-.85 1.2-.85.85 0 1.19.64 1.19 1.59V17H18Z"/></svg>LINKEDIN</a>
+        <!-- REPLACE-LINK : GitHub (from CV: WenjiBai) -->
+        <a class="slot" href="https://github.com/WenjiBai" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.68.92.68 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 22 12 10 10 0 0 0 12 2Z"/></svg>GITHUB</a>
+        <!-- REPLACE-LINK : Google Scholar -->
+        <a class="slot" href="https://scholar.google.com/citations?user=mjdfjG0AAAAJ&hl=en" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3M5 13.2v3.6L12 21l7-4.2v-3.6L12 17l-7-3.8Z"/></svg>SCHOLAR</a>
+        <!-- REPLACE-LINK : CV PDF -->
+        <a class="slot" href="cv.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>CV</a>
+      </div>
+
+      <div class="hero-blocks">
+        <!-- ABOUT ME -->
+        <div class="rv">
+          <div class="mini-head">
+            <span class="ic">★</span><h2>ABOUT ME</h2><span class="rule"></span>
+          </div>
+          <div class="panel about-box">
+            <p>
+              I feel very happy and lucky to work with my supervisors:
+              Dr. <a href="https://scholar.google.fi/citations?user=ufGtcBUAAAAJ&hl=fi" target="_blank" rel="noopener">Muhammad Waseem</a>,
+              <a >Prof. Pekka Abrahamsson</a>, and <a ></a>Prof. Jaakko Peltonen</a>. My current research looks at
+              <b style="color:var(--ink)">failure patterns in agentic systems</b>. I'm especially
+              interested in attributing and explaining the failed outputs of AI agents: why they go
+              wrong, where, and who's responsible.
+            </p>
+            <p>
+              Previously, I focused on Mutual Adversarial Learning, GNNs and GANs. I earned my
+              M.Sc. in Computer Science at Hunan Normal University, Changsha, China, where I was
+              fortunate to work with Prof. Lianming Zhang.
+            </p>
+            <p>
+              Outside research, I love music &amp; playing tennis, watching movies, and writing — in my
+              spare time I write my own songs. And yes, I'm a lifelong gaming fan.
+              Nintendo is the best, hands down. 🍄
+            </p>
+          </div>
+        </div>
+
+        <!-- QUICK FACTS -->
+        <div class="rv">
+          <div class="mini-head">
+            <span class="ic">▤</span><h2>QUICK FACTS</h2><span class="rule"></span>
+          </div>
+          <div class="panel facts-box">
+            <div class="fact-grid">
+              <div class="fact"><span class="fi">📍</span><span>Tampere, Finland</span></div>
+              <div class="fact"><span class="fi">🎓</span><span>PhD · Computer Science</span></div>
+              <div class="fact"><span class="fi">🧠</span><span>Generative AI &amp; Agentic AI</span></div>
+              <div class="fact"><span class="fi">🛡️</span><span>AI reliability &amp; trust</span></div>
+              <div class="fact"><span class="fi">🎵</span><span>Songwriter</span></div>
+              <!-- REPLACE-LINK : your songs link -->
+              <div class="fact"><span class="fi">🔗</span><span><a href="https://open.spotify.com/artist/6kfCI1mhuNssO4Y2G0IIaZ?si=u0v9tLsyQOSbx6CZt_WNYQ" target="_blank">► Listen to my songs</a></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ===== NEWS = QUEST LOG ===== -->
+  <section id="news">
+    <div class="sec-bar rv">
+      <span class="ic">!</span>
+      <h2>QUEST LOG</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="panel questlog rv">
+      <!-- copy a .quest block to add an entry. qtype: qt-talk / qt-paper / qt-mile / qt-award -->
+      <div class="quest">
+        <span class="qmark">!</span>
+        <div class="qbody">
+          <span class="qdate">2026 · MAY</span>
+          1st Place — Youth Participation Idea Competition, Tampere, Finland.
+        </div>
+        <span class="qtype qt-award">AWARD</span>
+      </div>
+      <div class="quest">
+        <span class="qmark">!</span>
+        <div class="qbody">
+          <span class="qdate">2026 · MAY</span>
+          Preparing a 3-minute elevator pitch for the AI-DOC × industry event.
+        </div>
+        <span class="qtype qt-talk">TALK</span>
+      </div>
+      <div class="quest">
+        <span class="qmark">!</span>
+        <div class="qbody">
+          <span class="qdate">2026</span>
+          Completed my first paper and plan to submit it to JSS.
+        </div>
+        <span class="qtype qt-paper">PAPER</span>
+      </div>
+      <div class="quest">
+        <span class="qmark">!</span>
+        <div class="qbody">
+          <span class="qdate">2024–2025</span>
+          Poster presentations at the AI-DOC Annual Event, Helsinki, Finland.
+        </div>
+        <span class="qtype qt-mile">EVENT</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PUBLICATIONS (published only — under-review paper omitted) ===== -->
+  <section id="publications">
+    <div class="sec-bar rv">
+      <span class="ic">📚</span>
+      <h2>PUBLICATIONS</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="panel pubs rv">
+
+      <div class="pub-row">
+        <div class="pub-badge">'23</div>
+        <div>
+          <div class="pub-title">TMANomaly: Time-Series Mutual Adversarial Networks for Industrial Anomaly Detection</div>
+          <div class="pub-auth">Lianming Zhang, <b>Wenji Bai</b>, Xiaowei Xie, Liying Chen, Pingping Dong</div>
+          <div class="pub-venue">IEEE TRANSACTIONS ON INDUSTRIAL INFORMATICS · 2023</div>
+          <div class="pub-links">
+            <!-- REPLACE-LINK : paper DOI / link -->
+            <a href="https://ieeexplore.ieee.org/document/10167479" target="_blank">LINK</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-row">
+        <div class="pub-badge">'23</div>
+        <div>
+          <div class="pub-title">A Data-Driven Network Intrusion Detection System Using Feature Selection and Deep Learning</div>
+          <div class="pub-auth">Lianming Zhang, Kui Liu, Xiaowei Xie, <b>Wenji Bai</b>, Baolin Wu, Pingping Dong</div>
+          <div class="pub-venue">JOURNAL OF INFORMATION SECURITY AND APPLICATIONS · 2023</div>
+          <div class="pub-links">
+            <!-- REPLACE-LINK : paper DOI / link -->
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214212623001904" target="_blank">LINK</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-row">
+        <div class="pub-badge">'22</div>
+        <div>
+          <div class="pub-title">MANomaly: Mutual Adversarial Networks for Semi-Supervised Anomaly Detection</div>
+          <div class="pub-auth">Lianming Zhang, Xiaowei Xie, Kai Xiao, <b>Wenji Bai</b>, Kui Liu, Pingping Dong</div>
+          <div class="pub-venue">INFORMATION SCIENCES · 2022</div>
+          <div class="pub-links">
+            <!-- REPLACE-LINK : paper DOI / link -->
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025522009161" target="_blank">LINK</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SIDE QUEST — indie game only ===== -->
+  <section id="projects">
+    <div class="sec-bar rv">
+      <span class="ic">🎮</span>
+      <h2>SIDE QUEST</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="cartridge rv">
+      <div class="cart-top">
+        <h3>INDIE GAME PROJECT</h3>
+        <span class="cart-stage">IN DEV</span>
+      </div>
+      <p>
+        A creative project in the gaming space: A little place where every drink tells a story. Run your bar, brew magical cocktails, and uncover the secrets your
+        customers carry through the door. Who stays, who leaves, and who changes forever? That's up to you. More to come.
+      </p>
+      <div class="cart-tags"><span>GAME DESIGN</span><span>STORYTELLING</span><span>INDIE DEV</span></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="gameover rv">★ THANKS FOR PLAYING ★</div>
+    <div class="credit rv">© 2026 WENJI BAI (柏文姬) · BUILT WITH <span class="heart">♥</span> IN TAMPERE</div>
+  </footer>
+
+</div>
+
+<script>
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{
+  el.style.transitionDelay=(i%3)*0.07+'s';
+  io.observe(el);
+});
+</script>
+</body>
+</html>
